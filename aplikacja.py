@@ -119,5 +119,6 @@ class App(customtkinter.CTk):
             customtkinter.CTkLabel(row, text=exp["place"], width=150, anchor="w").grid(row=0, column=4, padx=10)
             
 
-app = App()
-app.mainloop()
+if __name__ == '__main__':
+    app = App()
+    app.mainloop()
