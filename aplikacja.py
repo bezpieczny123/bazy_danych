@@ -8,14 +8,14 @@ from tkinter import messagebox
 class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
-        self.geometry("1920x1080")
+        self.geometry("1080x720")
         self.title("Zarządzanie wydatkami")
 
         database.init_database()
 
         # Main layout frames
         self.frame_left = customtkinter.CTkFrame(self)
-        self.frame_left.pack(side="left", fill="both", expand=True, padx=20, pady=20)
+        self.frame_left.pack(side="left", fill="both", expand=False, padx=20, pady=20)
 
         self.frame_right = customtkinter.CTkFrame(self, width=400)
         self.frame_right.pack(side="right", fill="y", padx=20, pady=20)
@@ -58,8 +58,8 @@ class App(customtkinter.CTk):
         self.entry_category = customtkinter.CTkEntry(self.frame_right, placeholder_text='Kategoria')
         self.entry_category.pack(pady=10, padx=20)
 
-        self.entry_price = customtkinter.CTkEntry(self.frame_right, placeholder_text='Cena')
-        self.entry_price.pack(pady=10, padx=20)
+        self.entry_cost = customtkinter.CTkEntry(self.frame_right, placeholder_text='Cena')
+        self.entry_cost.pack(pady=10, padx=20)
 
         self.entry_place = customtkinter.CTkEntry(self.frame_right, placeholder_text='Miejsce')
         self.entry_place.pack(pady=10, padx=20)
